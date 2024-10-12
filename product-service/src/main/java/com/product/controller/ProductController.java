@@ -18,7 +18,7 @@ public class ProductController {
 		
 	}
 
-//	@GetMapping(value = "/get-name/{name}")
+//	@GetMapping(value = "/get-name/{name}}")
 //	public String getName(@PathVariable("name")String name) {		
 //		return name;
 //	}
