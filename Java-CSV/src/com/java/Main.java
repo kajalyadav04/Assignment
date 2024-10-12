@@ -93,7 +93,7 @@ public class Main {
 				if (originalValueMap.containsKey(ch)) {
 					add += originalValueMap.get(ch);
 				} else {
-					add += calculateFormula(csvFileData.get(ch), originalValueMap, evalutingSet,csvFileData);
+					add += calculateFormula(csvFileData.get(ch).substring(1), originalValueMap, evalutingSet,csvFileData);
 				}								
 			} else {
 				add += Integer.parseInt(ch);
