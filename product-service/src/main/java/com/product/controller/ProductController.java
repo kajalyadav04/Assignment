@@ -1,5 +1,8 @@
 package com.product.controller;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +20,11 @@ public class ProductController {
 		this.productService=productService;
 		
 	}
+	@GetMapping(value="/{category}")
+	public List<Map<String, Object>> getProductByCategoryList(@PathVariable("category") String category){
+		return productService.getProductsByCategoryList(category);
+	}
+	
 
 //	@GetMapping(value = "/get-name/{name}}")
 //	public String getName(@PathVariable("name")String name) {		
@@ -26,5 +34,6 @@ public class ProductController {
 //	public String getNameAj() {		
 //		return "anjali";
 //	}
+	
 
 }
