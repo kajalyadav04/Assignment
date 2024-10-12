@@ -67,7 +67,7 @@ public class Main {
 			// If the value starts with "=", it's a formula, calculate it
 			if (valueEntry.startsWith("=")) {
 				String valueExp = valueEntry.substring(1);
-				System.out.println(valueExp);
+//				System.out.println(valueExp);
 				int calculated = calculateFormula(valueExp, originalValueMap,evalutingSet,csvFileData);
 				originalValueMap.put(getKeyString, calculated);
 			} else {
