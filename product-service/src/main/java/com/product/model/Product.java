@@ -3,6 +3,7 @@ package com.product.model;
 
 public class Product {
 
+	private String id;
 	private String title;
     private double price;
     private String description;
@@ -11,8 +12,9 @@ public class Product {
     public Product() {
     	
     }
-	public Product(String title, double price, String description, String category, String image) {
+	public Product(String id, String title, double price, String description, String category, String image) {
 		super();
+		this.id = id;
 		this.title = title;
 		this.price = price;
 		this.description = description;
@@ -20,6 +22,12 @@ public class Product {
 		this.image = image;
 	}
 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -52,9 +60,12 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [title=" + title + ", price=" + price + ", description=" + description + ", category="
-				+ category + ", image=" + image + "]";
+		return "Product [id=" + id + ", title=" + title + ", price=" + price + ", description=" + description
+				+ ", category=" + category + ", image=" + image + "]";
 	}
+	
+	
+	
 	
  
 

@@ -21,8 +21,8 @@ public class ProductRepo {
 		return restTemplate.getForObject(url, List.class);
 		
 	}
-	public String addProduct(Product product) {
+	public Product addProduct(Product product) {
 		String url="https://fakestoreapi.com/products";
-		return restTemplate.postForObject(url, product, String.class);
+		return restTemplate.postForObject(url, product, Product.class);
 	}
 }

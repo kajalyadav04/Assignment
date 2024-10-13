@@ -1,0 +1,34 @@
+1. How would you approach the challenge?
+
+	First, read the structure of the CSV file. Since we're using Java, I need to work with File handling concepts including 	BufferedReader and BufferedWriter to read and write the CSV data.
+	After reading the CSV file, analyze the content and break it down into smaller components for processing.
+	Once the data is analyzed, focus on performing the required arithmetic operations and updating the values. I could use a HashMap 	or LinkedHashMap to manage the data, especially if we need to keep the insertion order.
+	Finally, write the processed data back to the CSV file using BufferedWriter.
+
+
+
+2.What types of errors would you check for?
+
+	Check if the CSV file is available and handle errors when reading from it.
+	Similarly, check for availability and handle errors when writing to the CSV file.
+
+
+
+3.How could a user break your code?
+
+	The code  break if the user provides the CSV file in the wrong format.
+	If there’s an arithmetic error, like dividing by zero (/0), it could cause issues.
+	If someone provides values that are too large for a Double data type, the program might fail.
+	Circular dependencies, like formulas that refer back to each other (e.g., A = 5 + B and B = 5 + A), could also break the code.
+	Instead of +, if we provide another arithmetic operator(*,/,-) , it will abnormally terminates program.
+	  	
+
+
+
+
+
+
+
+
+
+

@@ -22,7 +22,7 @@ public class ProductService {
 		return productRepo.getProductByCategory(category);
 	}
 
-	public String addProducts(Product product) {
+	public Product addProducts(Product product) {
 		return productRepo.addProduct(product);
 	}
 

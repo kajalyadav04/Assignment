@@ -1,0 +1,11 @@
+When creating an API, here are important things to keep in mind:
+
+	Keep API endpoints clear and simple, with fewer path variables for easier use.
+	Handle edge cases and exceptions smoothly, providing clear error messages.
+	Add code comments, and documentation for better understanding.
+
+When consuming an API, consider the following:
+
+	Read and understand the API documentation clearly, so you know how the endpoints work.
+	Handle errors well, and show helpful error messages to users.
+	Understand the API response format and use it correctly in your application.

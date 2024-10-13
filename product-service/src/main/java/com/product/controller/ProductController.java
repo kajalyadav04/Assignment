@@ -24,15 +24,17 @@ public class ProductController {
 		this.productService=productService;
 	}
 
-	@GetMapping(value="/product{category}")
+	@GetMapping(value="/product/category/{category}")
 	public List<Map<String, Object>> getProductByCategoryList(@PathVariable("category") String category){
 		return productService.getProductsByCategoryList(category);
 	}
 
-	@PostMapping(value = "/product/save")
-	public String addProduct(@RequestBody Product product) {
-		System.out.println(product);
-		return productService.addProducts(product);
+	@PostMapping(value = "/product")
+	public Product addProduct(@RequestBody Product product) {
+		System.out.println("saviing product: "+product);
+		Product savedProduct = productService.addProducts(product);
+		System.out.println("product after sav: "+ savedProduct);
+		return savedProduct;
 	}
 
 //	@GetMapping(value = "/get-name/{name}}")
