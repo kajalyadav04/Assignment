@@ -20,15 +20,18 @@ public class ProductController {
 
 	private final ProductService productService;
 
+    // Constructor Injection for ProductService
 	public ProductController(ProductService productService) {
 		this.productService=productService;
 	}
-
+	
+    //Get Endpoint to get products by category /product/category/{category}
 	@GetMapping(value="/product/category/{category}")
 	public List<Map<String, Object>> getProductByCategoryList(@PathVariable("category") String category){
 		return productService.getProductsByCategoryList(category);
 	}
 
+    //Post Endpoint to add a new product
 	@PostMapping(value = "/product")
 	public Product addProduct(@RequestBody Product product) {
 		System.out.println("saviing product: "+product);
@@ -36,13 +39,4 @@ public class ProductController {
 		System.out.println("product after sav: "+ savedProduct);
 		return savedProduct;
 	}
-
-//	@GetMapping(value = "/get-name/{name}}")
-//	public String getName(@PathVariable("name")String name) {		
-//		return name;
-//	}
-//	@GetMapping(value = "/anjali")
-//	public String getNameAj() {		
-//		return "anjali";
-//	}
 }
